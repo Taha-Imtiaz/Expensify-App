@@ -1,0 +1,126 @@
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+  }
+  a,
+  a:hover,
+  a:visited {
+    text-decoration: none;
+    color: #fff;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    line-height: normal !important;
+  }
+  
+  body {
+      line-height: normal !important;
+    }
+  
+  html {
+    /* font-size: 62.5%; */
+  }
+  
+  .flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .container {
+    display: grid;
+    grid-template-columns: minmax(100px,1fr) 95px  minmax(100px,1fr);
+    grid-template-rows: repeat(3,12vh) minmax(64vh,min-content);
+    grid-template-areas: "m m m"
+                        "f f f"
+                         "e e e"
+                         "ex ex ex";
+  }
+
+  .menu {
+      grid-area: m;
+      background: lightslategray;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+  }
+
+  .add {
+    width: 80px;
+    height: 80px;
+    background: black;
+    border-radius: 50%;
+    position: fixed;
+    left: calc(100% - 110px);
+    top: calc(100% - 110px); 
+    color: white;
+    cursor: pointer;
+  }
+.filterExpense{
+    grid-area: f;
+    background: rgba(161, 92, 27, 0.76);
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns:5fr repeat(3,30fr) 5fr;
+    grid-template-areas: ". i1 i2 filterButton ."
+}
+.i1
+{
+    grid-area: i1;
+}
+.i2
+{
+    grid-area: i2;
+}
+.filterButton
+{
+    grid-area: filterButton;
+}
+.expenseTotal {
+    grid-area: e;
+    background: lightsalmon;
+}
+
+.expenses {
+    grid-area: ex;
+    background: lightskyblue;
+    flex-flow: column;
+    padding: 100px;
+}
+
+.expense {
+    margin-bottom: 20px;
+}
+
+.expense h1 {
+    margin-right: 30vw;
+}
+.expense h2 {
+    margin-right: 50px;
+}
+  
+.expense .btn   {
+    margin-left: 20px;
+    font-size: 18px;
+    padding: 8px 12px;
+    border: 2px solid black;
+}
+.i1,.i2,.filterButton
+{
+    margin-left: 20px;
+    font-size: 14px;
+    padding: 6px 12px;
+    /* background: lawngreen; */
+    border: 2px solid black;
+    outline: none;
+    width: 15rem;
+    cursor: pointer;
+}
